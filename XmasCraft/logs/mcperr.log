@@ -1,0 +1,25 @@
+20:33:45 - !! Updates available. Please run updatemcp to get them. !!
+20:33:45 - !! Modified jar detected. Unpredictable results !!
+20:34:13 - 'runtime\bin\applydiff.exe -p1 -u -i ..\..\temp\temp.patch -d src\minecraft' failed : 1
+20:34:13 - 
+20:34:13 - == ERRORS FOUND ==
+20:34:13 - When decompiling with ModLoader a single hunk failure in RenderBlocks is expected and is not a problem
+20:34:13 - 
+20:34:13 - 1 out of 1 hunk FAILED -- saving rejects to file 'net\minecraft\src\RenderBlocks.#'
+20:34:13 - ==================
+20:34:13 - 
+20:34:29 - !! Missing server jar file. Aborting !!
+20:34:32 - '"C:\Program Files (x86)\Java\jdk1.6.0_25\bin\javac" -Xlint:-options -deprecation -g -source 1.6 -tar...' failed : 1
+20:34:32 - 
+20:34:32 - == ERRORS FOUND ==
+20:34:32 - 
+20:34:32 - src\minecraft\net\minecraft\src\GenLayerDimension.java:58: incompatible types
+20:34:32 - found   : java.lang.Object
+20:34:32 - required: net.minecraft.src.GenLayer
+20:34:32 -                     obj2, genlayervoronoizoom, genlayerdimensionwater
+20:34:32 -                     ^
+20:34:32 - 
+20:34:32 - 1 error
+20:34:32 - ==================
+20:34:32 - 
+20:34:32 - Initial client recompile failed, correct source then run updatemd5

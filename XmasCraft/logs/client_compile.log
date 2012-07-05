@@ -1,0 +1,8 @@
+src\minecraft\net\minecraft\src\GenLayerDimension.java:58: incompatible types
+found   : java.lang.Object
+required: net.minecraft.src.GenLayer
+                    obj2, genlayervoronoizoom, genlayerdimensionwater
+                    ^
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+1 error

@@ -1,0 +1,65 @@
+package net.minecraft.src;
+
+import java.util.Random;
+import java.util.List;
+import java.util.jar.*;
+
+
+public class mod_Xmascraft extends BaseMod
+{
+	
+	public static int XmascraftCandyCaneRedTop = ModLoader.addOverride("/terrain.png", "/Xmascraft/Block/XmascraftStone.png"); 
+	public static int XmascraftCandyCaneRedBottom = ModLoader.addOverride("/terrain.png",  "/Xmascraft/Block/XmascraftStone.png");
+	
+	//Declares the Blocks
+	public static Block XmascraftSnow = new BlockXmascraftSnow(210, 0).setHardness(1.0F).setResistance(1.0F).setLightValue(1.0F).setBlockName("Xmascraft Snow");
+	public static Block XmascraftIce = new BlockXmascraftIce(211, 0).setHardness(1.0F).setResistance(6000.0F).setLightValue(1.0F).setBlockName("Xmascraft Ice");
+	public static Block XmascraftStone = new BlockXmascraftStone(213, 0).setHardness(1.0F).setResistance(2000.0F).setBlockName("Xmascraft Stone");
+	public static final BlockXmascraftPortal XmascraftPortal = (BlockXmascraftPortal)(new BlockXmascraftPortal(212).setHardness(1.0F).setResistance(6000.0F).setBlockName("Xmascraft Portal"));
+	public static Block XmascraftCandyCaneRed = new BlockXmascraftCandyCaneRed(215, 0).setHardness(1.0F).setResistance(2000.0F).setBlockName("Xmascraft CC Red");
+	public static Block XmascraftCandyCaneGreen = new BlockXmascraftCandyCaneGreen(216, 0).setHardness(1.0F).setResistance(2000.0F).setBlockName("Xmascraft CC Green");
+
+	
+	public void load()
+	{
+		
+		
+	//Registers the blocks with modloader
+		ModLoader.registerBlock(XmascraftSnow);
+		ModLoader.registerBlock(XmascraftIce);
+		ModLoader.registerBlock(XmascraftPortal);
+		ModLoader.registerBlock(XmascraftStone);
+		ModLoader.registerBlock(XmascraftCandyCaneGreen);
+		ModLoader.registerBlock(XmascraftCandyCaneRed);
+
+		
+	//Adds name to blocks & Items in modloader
+		ModLoader.addName(XmascraftStone, "Xmas Stone");
+		ModLoader.addName(XmascraftPortal, "Xmas Portal");
+		ModLoader.addName(XmascraftCandyCaneGreen, "Green Candycane");
+		ModLoader.addName(XmascraftCandyCaneRed, "Red Candycane");
+		
+		
+	//Adds crafting recipe to Items and blocks Shapeless or not
+		XmascraftStone.blockIndexInTexture = ModLoader.addOverride("/terrain.png", "/Xmascraft/Block/XmascraftStone.png");
+		XmascraftPortal.blockIndexInTexture = ModLoader.addOverride("/terrain.png", "/Xmascraft/Block/XmascraftPortal.png");
+		XmascraftCandyCaneGreen.blockIndexInTexture  = ModLoader.addOverride("/terrain.png", "/Xmascraft/Block/XmascraftPortal.png");
+	    
+		
+		//For multitexture Blocks 
+	
+
+		
+		
+		ModLoader.addRecipe(new ItemStack(XmascraftStone, 1), new Object[] {"d", Character.valueOf('d'), Block.dirt, Character.valueOf('X'), Block.sand, Character.valueOf('Z'), Block.planks});
+		
+		ModLoader.addRecipe(new ItemStack(XmascraftCandyCaneRed, 1), new Object[] {"d", Character.valueOf('d'), Block.brick, Character.valueOf('X'), Block.sand, Character.valueOf('Z'), Block.planks});
+
+	}
+
+	public String getVersion()
+	{
+		return " Xmascraft | 0.01 | MC: 1.2.5";
+	}
+	
+}

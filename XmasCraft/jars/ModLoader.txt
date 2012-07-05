@@ -1,0 +1,36 @@
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader init
+FINE: ModLoader 1.2.5 Initializing...
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader readFromClassPath
+FINER: Adding mods from C:\Users\i5 System\Desktop\XmasCraft\eclipse\Client\bin
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader readFromClassPath
+FINER: Directory found.
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addMod
+FINE: Mod Initialized: "mod_DimensionAPI 1.5 for MC 1.2.5" from mod_DimensionAPI.class
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addMod
+FINE: Mod Initialized: "mod_Xmascraft Xmascraft | 0.10 | MC: 1.2.5" from mod_Xmascraft.class
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader init
+FINE: Mod Loaded: "mod_DimensionAPI 1.5 for MC 1.2.5"
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addOverride
+FINER: addOverride(/terrain.png,/Xmascraft/Block/SnowBlock.png,171). 28 left.
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addOverride
+FINER: addOverride(/terrain.png,/Xmascraft/Block/XmascraftStone.png,172). 27 left.
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addOverride
+FINER: addOverride(/terrain.png,/Xmascraft/Block/XmascraftPortal.png,173). 26 left.
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addOverride
+FINER: addOverride(/terrain.png,/Xmascraft/Block/XmascraftPortal.png,184). 25 left.
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addOverride
+FINER: addOverride(/terrain.png,/Xmascraft/Block/CandyCaneRed.png,185). 24 left.
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addOverride
+FINER: addOverride(/terrain.png,/Xmascraft/Block/CandyCaneGreen.png,186). 23 left.
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addOverride
+FINER: addOverride(/terrain.png,/Xmascraft/Block/XmascraftStoneOre.png,187). 22 left.
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addOverride
+FINER: addOverride(/gui/items.png,/Xmascraft/Item/CandyCaneRed.png,38). 84 left.
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addOverride
+FINER: addOverride(/gui/items.png,/Xmascraft/Item/CandyCaneGreen.png,102). 83 left.
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addOverride
+FINER: addOverride(/gui/items.png,/Xmascraft/Item/XmasShards.png,118). 82 left.
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader init
+FINE: Mod Loaded: "mod_Xmascraft Xmascraft | 0.10 | MC: 1.2.5"
+Jul 04, 2012 8:48:29 PM net.minecraft.src.ModLoader addAllRenderers
+FINE: Initialized

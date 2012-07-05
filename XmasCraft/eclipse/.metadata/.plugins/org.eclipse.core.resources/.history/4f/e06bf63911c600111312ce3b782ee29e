@@ -1,0 +1,46 @@
+package net.minecraft.src;
+
+import java.util.Random;
+
+public class EntityReindeer extends EntityMob
+{
+	public EntityReindeer(World world)
+	{
+		super(world);
+		texture = "/Xmascraft/Block/CandyCaneGreen.png";
+		moveSpeed = 0.5F;
+		isImmuneToFire = false;
+		attackStrength = 4; //This line can only be here if the class extends EntityMob above ^^^. If it doesn't, just delete this whole line
+	}
+
+	public int getMaxHealth()
+	{
+		return 20;
+	}
+
+	protected String getLivingSound()
+	{
+		return "mob.villager.default";
+	}
+
+	protected String getHurtSound()
+	{
+		return "mob.villager.defaulthurt";
+	}
+
+	protected String getDeathSound()
+	{
+		return "mob.villager.defaultdeath";
+	}
+
+	protected int getDropItemId()
+	{
+		return Item.ingotIron.shiftedIndex;
+	}
+
+	protected boolean canDespawn()
+	{
+		return false;
+	}
+
+}

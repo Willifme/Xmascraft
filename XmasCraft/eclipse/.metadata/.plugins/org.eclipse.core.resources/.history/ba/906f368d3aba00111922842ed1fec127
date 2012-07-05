@@ -1,0 +1,32 @@
+package net.minecraft.src;
+
+public class mod_Xmascraft extends BaseMod{
+
+	  public static Block xmasblock = new BlockXmas(190, 0).setHardness(1.0F).setResistance(5.0F).setLightValue(0F).setBlockName("xmasblock");
+	
+	@Override
+	public String getVersion() {
+
+		//Crash Message
+		return "Xmascraft | V0.01 | MC 1.2.5";
+	}
+
+	@Override
+	public void load() {
+		
+		
+		
+	}
+
+	public mod_Xmascraft() {
+		
+		 ModLoader.registerBlock(xmasblock);
+	      Block.blockIndexInTexture = ModLoader.addOverride("/terrain.png", "/block.png");
+	      ModLoader.addName(xmasblock, "Change me in mod_Block");
+	      ModLoader.addRecipe(new ItemStack(xmasblock, 1), new Object[] { 
+	      "#", Character.valueOf('#'), Block.dirt
+	      });
+		
+	}
+	
+}

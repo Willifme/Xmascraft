@@ -1,0 +1,44 @@
+package net.minecraft.src;
+
+import java.util.Random;
+import java.util.List;
+import java.util.jar.*;
+
+
+public class mod_Xmascraft extends BaseMod
+{
+	
+//	public static final Block XmascraftSnow = (new XmascraftSnow(210).setHardness(0.5F).setResistance(1F).setBlockName("AntarticaSnow"));
+//	public static final Block XmascraftIce = (new XmascraftIce(211).setHardness(0.5F).setResistance(1F).setBlockName("AntarticaSnow"));
+//	public static final Block XmascraftPortal = (new BlockXmascraftPortal(212).setStepSound(Block.soundWoodFootstep).setHardness(0.5F).setResistance(1F).setBlockName("AntarticaSnow"));
+//	public static final Block XmascraftStone= (new PortalShell(213).setHardness(0.5F).setResistance(1F).setBlockName("AntarticaSnow"));
+	
+	public static Block XmascraftSnow = new BlockXmascraftSnow(210, 0).setHardness(1.0F).setResistance(6000.0F).setLightValue(1.0F).setBlockName("Namehere");
+	public static Block XmascraftIce = new BlockXmascraftIce(211, 0).setHardness(1.0F).setResistance(6000.0F).setLightValue(1.0F).setBlockName("Namehere1");
+//	public static Block XmascraftPortal = new BlockXmascraftPortal(212).setHardness(1.0F).setResistance(6000.0F).setLightValue(1.0F).setBlockName("Namehere2");
+	public static Block XmascraftStone = new BlockPortalShell(213, 0).setHardness(1.0F).setResistance(6000.0F).setLightValue(1.0F).setBlockName("Namehere3");
+	public static final BlockXmascraftPortal XmascraftPortal = (BlockXmascraftPortal)(new BlockXmascraftPortal(212).setHardness(1.0F).setResistance(6000.0F).setBlockName("Namehere2"));
+
+	
+	public void load()
+	{
+	
+		ModLoader.registerBlock(XmascraftSnow);
+		ModLoader.registerBlock(XmascraftIce);
+
+		
+		ModLoader.registerBlock(XmascraftPortal);
+
+		ModLoader.registerBlock(XmascraftStone);
+
+		
+		ModLoader.addRecipe(new ItemStack(XmascraftStone, 64), new Object[] { "XXX","ddd","ZZZ", Character.valueOf('d'), Block.dirt, Character.valueOf('X'), Block.sand, Character.valueOf('Z'), Block.planks}); 
+
+	}
+
+	public String getVersion()
+	{
+		return " Xmascraft | 0.01 | MC: 1.2.5";
+	}
+	
+}

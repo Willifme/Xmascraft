@@ -1,0 +1,22 @@
+package net.minecraft.src;
+
+import org.lwjgl.opengl.GL11;
+
+public class RenderReindeer extends RenderLiving
+{
+        protected ModelReindeer modelNamehereMain;
+        protected float field_40296_d;
+
+        public RenderReindeer(ModelReindeer par1ModelReindeer, float par2)
+        {
+                this(par1ModelReindeer, par2, 1.0F);
+                modelNamehereMain = par1ModelReindeer;
+        }
+
+        public RenderReindeer(ModelReindeer par1ModelReindeer, float par2, float par3)
+        {
+                super(par1ModelReindeer, par2);
+                modelNamehereMain = par1ModelReindeer;
+                field_40296_d = par3;
+        }
+}

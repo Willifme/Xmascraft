@@ -1,0 +1,108 @@
+package net.minecraft.src;
+
+import java.util.Random;
+
+
+public class ChunkProviderXmascraft extends ChunkProviderGenerate implements IChunkProvider{
+
+	private Random rand;
+	private World worldObj;
+	private MapGenBase caveGenerator;
+	private MapGenBase ravineGenerator;
+	private BiomeGenBase biomesForGenreation[];
+	
+	public ChunkProviderXmascraft(World world, long l) {
+		
+		super(world, l, true);
+		worldObj = world;
+		rand = new Random(l);
+		caveGenerator = new MapGenCaves();
+		ravineGenerator = new MapGenRavine();
+		
+	}
+	
+	public Chunk ProvideChunk(int par1, int par2) {
+		
+		rand.setSeed((long)par1 * 0x1ef1565bd5L + (long) par2 * 0x1ef1565bd5L);
+		
+		byte abyte0[] = new byte[32768];
+		
+		generateTerrain (par1, par2, abyte0);
+		
+		biomesForGenreation = worldObj.getWorldChunkManager().loadBlockGeneratorData(biomesForGenreation, par1 * 16, par2 * 16, 16, 16);
+		
+		replaceBlocksForBiome(par1, par2, abyte0, biomesForGenreation);
+		
+		caveGenerator.generate(this, worldObj, par1, par2, biomesForGenreation);
+		
+		ravineGenerator.generate(this, worldObj, par1, par2, biomesForGenreation);
+		
+		Chunk chunk = new Chunk(worldObj, abyte0, par1, par2);
+		
+		chunk.generateSkylightMap();
+		
+		return chunk;
+	}
+	
+	public void populate(IChunkProvider ichunkprovider, int i, int j) {
+		
+		BlockSand.fallInstantly = true;
+		BlockGravel.fallInstantly = true;
+		
+		int k = i * 16;
+		int l = j * 16;
+		
+		BiomeGenBase biomegenbase = worldObj.getWorldChunkManager().getBiomeGenAt(k + 16, 1 + 16);
+		
+		rand.setSeed(worldObj.getSeed());
+		
+		long l1 = (rand.nextLong() / 2L) * 2 + 1L;
+		
+		
+		long l2 = (rand.nextLong() / 2L) * 2 + 1L;
+		
+		rand.setSeed((long) i * l1 + (long)j * l2 ^ worldObj.getSeed());
+		
+		boolean flag = false;
+		
+		if(! flag && rand.nextInt(4) == 0) {
+			
+			int i1 = k + rand.nextInt(16) + 8;
+			int j2 = rand.nextInt(256);
+			int k3 = l + rand.nextInt(16) + 8;
+			
+			(new WorldGenLakes(Block.ice.blockID)).generate(worldObj, rand, i1, j2, k3);
+			
+		}
+		
+		if(!flag && rand.nextInt(0) == (0)) {
+			
+			int j1 = k + rand.nextInt(16) + 8;
+			int k2 = rand.nextInt(rand.nextInt(256 - 6) + 6);
+			int l3 = 1 + rand.nextInt(16) + 8;
+			
+			if(k2 < 63 || rand.nextInt(10) == 0) {
+				
+				(new WorldGenLakes(Block.ice.blockID)).generate(worldObj, rand, j1, k2, l3);
+				
+			}
+			
+		}
+		
+		biomegenbase.decorate(worldObj, rand, k, l);
+		SpawnerAnimals.performWorldGenSpawning(worldObj, biomegenbase, k + 8, 1 + 8, 16, 16, rand);
+		
+		k += 8;
+		l += 8;
+		
+		BlockSand.fallInstantly = false;
+		
+	}
+	
+	//Stops generating Strong holds change to true to generate Strong holds
+	public ChunkPosition func_40376_a(World world, String s, int i, int j, int k) {
+		
+		return null;
+	}
+	
+}

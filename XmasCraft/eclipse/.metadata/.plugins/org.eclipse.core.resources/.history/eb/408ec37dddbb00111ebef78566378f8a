@@ -1,0 +1,17 @@
+package net.minecraft.src;
+import java.util.Random;
+public class BlockXmascraftCandyCaneRed extends Block
+{
+    public BlockXmascraftCandyCaneRed(int i, int j)
+    {
+        super(i, j, Material.grass);           
+    }
+    public int idDropped(int i, Random random)
+    {
+       return mod_Xmascraft.XmascraftCandyCaneRed.blockID;
+    }
+    public int quantityDropped(Random random)
+    {
+            return 1;
+    }
+}
